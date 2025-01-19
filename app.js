@@ -50,7 +50,6 @@ app.get('/todo', function (req, res) {
         res.redirect('/todo');
     })
 
-    // Get a single todo item and render edit page
     .get('/todo/:id', function (req, res) {
         let todoIdx = req.params.id;
         let todo = todolist[todoIdx];
