@@ -67,7 +67,6 @@ app.get('/todo', function (req, res) {
 
     .put('/todo/edit/:id', function (req, res) {
         let todoIdx = req.params.id;
-        // Escapes HTML special characters in attribute values as HTML entities
         let editTodo = sanitizer.escape(req.body.editTodo);
         if (todoIdx != '' && editTodo != '') {
             todolist[todoIdx] = editTodo;
